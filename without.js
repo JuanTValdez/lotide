@@ -20,12 +20,22 @@ const eqArrays = function (array1, array2) {
   }
 };
 
-const flatten = function (array) {
+const without = function (array, remove) {
   let newArray = [];
-  newArray = array.flat();
+  let savedElement;
 
+  for (let i = 0; i < array.length; i++) {
+    // console.log(array[i]);
+
+    if (array[i] !== remove[0] && array[i] !== remove[1]) {
+      savedElement = array[i];
+      // array.pop([i])
+      newArray.push(savedElement);
+    }
+  }
   console.log(newArray);
   return newArray;
 };
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+without([1, 2, 5, 3], [2, 3]);
+assertArraysEqual(without([1, 2, 5, 3], [2, 3]), [1, 5]);
