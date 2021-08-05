@@ -26,15 +26,15 @@ const middle = function (array) {
   if (array.length % 2 === 0) {
     newArray.push(array[middle - 1]);
     newArray.push(array[middle]);
-    console.log(newArray);
+
     return newArray;
   }
   newArray.push(array[middle - 1]);
 
-  console.log(newArray);
   return newArray;
 };
 
+assertEqual(eqArrays(middle([1, 2, 3, 4, 5]), [3]), true);
 middle([1, 2, 3, 4, 5]) === [3];
 middle([1, 2, 3, 4, 5, 6]) === [3, 4];
 middle([1, 2, 3]) === [2];
