@@ -29,3 +29,5 @@ const tail = function (array) {
 // tail([1, 2, 3, 4, 5]);
 assertEqual(tail([1, 2, 3, 4, 5]), 4);
 assertEqual(tail(["Hello", "Lighthouse", "Labs"]), 2);
+
+console.log("I'm all up in you're codes ");
