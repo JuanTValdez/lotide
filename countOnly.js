@@ -10,10 +10,32 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countOnly = function (firstNames, itemsToCount) {
-  var count = 0;
-  firstNames.forEach((item) => item === itemsToCount);
+const countOnly = function (allItems, itemsToCount) {
+  const results = {};
+
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
+    }
+  }
+
+  return results;
 };
+
+// const countOnly = function (allItems, itemsToCount) {
+//   const results = {};
+//   for (let item of allItems) {
+//     if (results[item]) {
+//       results[item] += 1;
+//     } else {
+//       results[item] = 1;
+//     }
+//   }
+// };
 
 const firstNames = [
   "Karl",
@@ -27,27 +49,16 @@ const firstNames = [
   "Joe",
 ];
 
+// const results1 = countOnly(firstNames);
+// console.log(results1);
 const result1 = countOnly(firstNames, {
   Jason: true,
   Karima: true,
   Fang: true,
   Agouhanna: false,
 });
-
+console.log(result1);
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
-
-countOnly(
-  [45, 67, 8, 23, 67, 29, 31, 67, 45],
-
-  {
-    45: true,
-    67: true,
-    8: false,
-    23: false,
-    29: true,
-    31: true,
-  }
-);
