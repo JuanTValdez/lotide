@@ -25,7 +25,7 @@ const numbers = [1, 2, 3, 4, 5];
 //   const results = [];
 //   for (let item of array) {
 //     console.log("item BEFORE: ", item);
-//     console.log("item AFTER: ", callback(item));
+//     console.log("item AFTER: ", callback(item)git l);
 //     console.log("---");
 //   }
 //   return results;
