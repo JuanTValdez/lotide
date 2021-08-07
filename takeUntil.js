@@ -24,9 +24,9 @@ const takeUntil = function (array, callback) {
   // ...
   const results = [];
   for (let item of array) {
-    if (callback(item) == false) {
+    if (callback(item) === false) {
       results.push(item);
-    } else if (callback(item) == true) {
+    } else if (callback(item) === true) {
       console.log(results);
       return results;
     }

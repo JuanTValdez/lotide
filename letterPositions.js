@@ -25,20 +25,6 @@ const phrase = "lighthouse in the house";
 const letterPositions = function (sentence) {
   const results = {};
 
-  // for (const letter of phrase) {
-  //   // if a Key exist in results
-  //   if (results[letter]) {
-  //     position = phrase.indexOf(letter);
-
-  //     results[letter].push(position);
-  //   } else if (!results[letter] && letter != " ") {
-  //     let array = new Array();
-  //     position = phrase.indexOf(letter);
-  //     array.push(position);
-  //     results[letter] = array;
-  //   }
-  // }
-
   for (let i = 0; i < sentence.length; i++) {
     if (results[sentence[i]] && sentence[i] != " ") {
       results[sentence[i]].push(i);
