@@ -26,7 +26,7 @@ const eqArrays = function (array1, array2) {
 // Fails
 // assertArraysEqual([1, 21, 3, 14], [81, 2, 83, 4]);
 
-assertArraysEqual(eqArrays([1, 2, 3, 4], [1, 2, 3, 4]), true);
+// assertArraysEqual(eqArrays([1, 2, 3, 4], [1, 2, 3, 4]), true);
 
 // assertArraysEqual(eqArrays([1, 2, 3, 4], [1, 2, 3, 4]), [1, 2, 3, 4]);
 
@@ -41,3 +41,4 @@ assertArraysEqual(eqArrays([1, 2, 3, 4], [1, 2, 3, 4]), true);
 //     );
 //   }
 // };
+module.exports = assertArraysEqual;
