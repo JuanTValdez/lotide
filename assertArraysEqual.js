@@ -1,3 +1,5 @@
+const eqArrays = require("./eqArrays");
+
 const assertArraysEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(
@@ -10,15 +12,15 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (array1, array2) {
-  if (String(array1) === String(array2)) {
-    console.log(true);
-    return true;
-  } else {
-    console.log(false);
-    return false;
-  }
-};
+// const eqArrays = function (array1, array2) {
+//   if (String(array1) === String(array2)) {
+//     console.log(true);
+//     return true;
+//   } else {
+//     console.log(false);
+//     return false;
+//   }
+// };
 
 // Passes
 // assertArraysEqual([1, 2, 3, 4], [1, 2, 3, 4]);
