@@ -16,6 +16,7 @@ const assertEqual = function (actual, expected) {
 // assertEqual(1, 1);
 
 module.exports = assertEqual;
+
 /* HERE */
 
 // const sum = function (a, b) {
